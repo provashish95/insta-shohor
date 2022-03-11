@@ -88,16 +88,17 @@
                     <p class="card-text">আমরা জানি জাভাস্ক্রিপ্ট single threaded programming language, means that Where
                         JavaScript code is run, runs in one line at a time manner and there is no possibility of running
                         code in parallel। কিন্তু event loop এর মাধ্যমে asynchronous javaScript and multi threaded এর মত
-                        কাজগুলাকে ম্যানেজ করতে পারে । V8 engine এ heap এবং Stack নামে দুইটা memory আছে । Heap হচ্ছে
+                        কাজগুলাকে ম্যানেজ করতে পারে । V8 engine এ Heap এবং Stack নামে দুইটা memory আছে । Heap হচ্ছে
                         মেমোরি এরিয়া যেখানে ডাটা Randomly থাকে এবং Stack এ function গুলোকে স্টোর করে রেখে LIFO পদ্ধতিতে
-                        code execute করে থাকে। সাধারনত জাভাস্ক্রিপ্ট এ synchronously code execute হয়,যখন asynchronous
+                        code execute করে থাকে। সাধারনত জাভাস্ক্রিপ্ট এ synchronously code execute হয় । যখন asynchronous
                         কোনো function Call Stack এ যায় তখন Call Stack asynchronous function execution এর জন্য বসে না
                         থেকে ঐ function টাকে popup করে Web API/ C++ API এ push করে
-                        দেয় । Web API /C++ API তে asynchronous function এর কাজ শেষ হয়ে গেলে সেটা Event queue তে স্টোর
+                        দেয় এবং synchronous function গুলোকে execute করতে থাকে । Web API /C++ API তে asynchronous
+                        function এর কাজ শেষ হয়ে গেলে সেটা Event queue তে স্টোর
                         হয়ে থাকে । আর এইখানেই Event loop এর কাজ শুরু হয়, কারন event loop প্রথমে Call Stack চেক করে দেখে
                         main() function বাদে বাকি function এর কাজ শেষ হইছে কিনা, যদি শেষ হয়ে থাকে তাহলে priority অনুযায়ী
-                        Event Queue থেকে FIFO পদ্ধতিতে Event loop asynchronous function গুলাকে সিরিয়ালি Call Stack এ
-                        push করে দেয় এবং Call Stack asynchronous function গুলা Execute করে দেয়। সুতরাং আমরা বলতে পারি
+                        Event Queue থেকে FIFO পদ্ধতিতে Event loop asynchronous function গুলোকে সিরিয়ালি Call Stack এ
+                        push করে দেয় এবং Call Stack asynchronous function গুলা Execute করে। সুতরাং আমরা বলতে পারি
                         Event Loop এর কাজই হচ্ছে Stack memory and Event Queue কে মনিটর করা এবং Rules অনুযায়ী Queue থেকে
                         function গুলাকে Stack memory তে পৌছিয়ে দেওয়া Execution এর জন্য ।
                     </p>
