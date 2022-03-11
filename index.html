@@ -58,13 +58,84 @@
         </div>
     </main>
     <section class="main container mx-auto p-3">
-        <div class="card border-primary mb-3" id="answer-sheet" style="max-width: 18rem;">
-            <div class="card-header">Header</div>
-            <div class="card-body text-primary">
-                <h5 class="card-title">Primary card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
+        <div id="answer-sheet">
+            <div class="card border-secondary mb-3">
+                <div class="card-header">
+                    <h5>How does javaScript work ?</h5>
+                </div>
+                <div class="card-body text-secondary">
+                    <p class="card-text">javaScript code/সোর্স ফাইল ব্রাউজারে execute করে ব্রাউজারগুলোর নিজস্ব
+                        javaScript
+                        engine দ্বারা । যেমন google chrome এ V8 engine/ Firefox এ Spidermonkey/ Edge এ Chakra।আমরা
+                        জানি
+                        JavaScript is an interpreted language তাই V8 engine বা V8 engine এর Internal JIT (just in
+                        time)
+                        compiler দ্রুত javaScript code execute করে দেয় । প্রথমে কোডগুলাকে লাইন টু লাইন চেক করে
+                        যেটাকে বলে Parser যদি কোড চেক করে ভুল পায় তো সাথে সাথে আমাদের ব্রাউজারে ইনফর্ম করে দেয় আর যদি
+                        ভুল না পায়
+                        তাহলে নেক্সট স্টেপ Abstract Syntax Tree তৈরি করে। এবং পরবর্তীতে Interpreter ignition অন করে
+                        মেশিন কোড বা বাইটকোডে রুপান্তরিত হয় আর এই interpreter এর কাজটাকে দ্রুত করার জন্যই JIT ব্যবহার
+                        করা হয়। সাধারনত হাইলেভেল ল্যাঙ্গুয়েজ মেশিন বুঝতে পারে না তাই মেশিনকোডে কনভার্ট করতে হয় এবং
+                        কনভার্টেড কোড গুলোকে সিস্টেমে পাঠিয়ে দেওয়া হয় Execution এর জন্য, সর্বশেষ বাইটকোড বা মেশিনকোডটি
+                        সিস্টেম দ্বারা রান করার পর আমরা আমাদের আউটপুট দেখতে পাই । সাধারণত জাভাস্ক্রিপ্ট এভাবেই কাজ করে
+                        থাকে জাভাস্ক্রিপ্ট ইঞ্জিন দ্বারা।
+                    </p>
+                </div>
             </div>
+
+            <div class="card border-secondary mb-3">
+                <div class="card-header">
+                    <h5>What does javascript event loop do ?</h5>
+                </div>
+                <div class="card-body text-secondary">
+                    <p class="card-text">আমরা জানি জাভাস্ক্রিপ্ট single threaded programming language means Where
+                        JavaScript code is run, runs in one line at a
+                        time manner and there is no possibility of running code in parallel। কিন্তু event loop
+                        এর মাধ্যমে asynchronous javaScript and multi threaded এর মত কাজগুলাকে ম্যানেজ করতে পারে ।
+                        V8 engine এ heap এবং Stack নামে দুইটা memory আছে, heap হচ্ছে মেমোরি এরিয়া যেখানে ডাটা Randomly
+                        থাকে এবং Stack এ function গুলোকে স্টোর করে রেখে LIFO পদ্ধতিতে code
+                        execute করে থাকে। সাধারনত জাভাস্ক্রিপ্ট এ synchronously code execute হয়,যখন asynchronous কোনো
+                        function Call Stack এ যায় তখন Call
+                        Stack asynchronous function execution এর জন্য বসে না থেকে ঐ function
+                        টাকে popup করে Web API/ C++ API এ push করে
+                        দেয়। Web API /C++ API তে asynchronous function এর কাজ শেষ হয়ে গেলে সেটা Event queue তে স্টোর হয়ে
+                        থাকে,আর এইখানেই Event
+                        loop এর কাজ শুরু হয়। কারন event loop প্রথমে Call Stack চেক করে দেখে main() function বাদে বাকি
+                        function এর কাজ শেষ হইছে কিনা যদি শেষ হয়ে থাকে তাহলে priority অনুযায়ী Event Queue থেকে FIFO
+                        পদ্ধতিতে Event
+                        loop asynchronous function গুলাকে সিরিয়ালি Call Stack এ push করে দেয় এবং Call Stack asynchronous
+                        function গুলা
+                        Execute করে
+                        দেয়। সুতরাং আমরা বলতে পারি Event Loop এর কাজই হচ্ছে Stack memory and Event Queue কে মনিটর করা
+                        এবং Rules অনুযায়ী Queue থেকে function গুলাকে Stack memory তে পৌছিয়ে দেওয়া Execution এর জন্য
+                        ।
+
+
+
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="card border-secondary mb-3">
+                <div class="card-header">
+                    <h5>Difference between local storage and session storage</h5>
+                </div>
+                <div class="card-body text-secondary">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.Some quick example text to build on the card title and make up the bulk of the
+                        card's content.Some quick example text to build on the card title and make up the bulk of the
+                        card's content.Some quick example text to build on the card title and make up the bulk of the
+                        card's content.Some quick example text to build on the card title and make up the bulk of the
+                        card's content.Some quick example text to build on the card title and make up the bulk of the
+                        card's content.Some quick example text to build on the card title and make up the bulk of the
+                        card's content.Some quick example text to build on the card title and make up the bulk of the
+                        card's content.Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+
+            </div>
+
         </div>
         <!-- here write bonus mark minimum two question answer but three is best ok !  -->
         <!-- here write bonus mark minimum two question answer but three is best ok !  -->
