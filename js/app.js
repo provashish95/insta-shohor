@@ -33,16 +33,19 @@ const displayContent = (text) => {
 const switchTab = (id) => {
   if (id === "posts") {
     document.getElementById("posts").style.display = "grid";
+    document.getElementById("answer-sheet").style.display = "block";
     document.getElementById("liked").style.display = "none";
     document.getElementById("reported").style.display = "none";
   } else if (id === "liked") {
     document.getElementById("liked").style.display = "block";
+    document.getElementById("answer-sheet").style.display = "none";
     document.getElementById("posts").style.display = "none";
     document.getElementById("reported").style.display = "none";
 
     displayLikedPosts();
   } else {
     document.getElementById("reported").style.display = "block";
+    document.getElementById("answer-sheet").style.display = "none";
     document.getElementById("posts").style.display = "none";
     document.getElementById("liked").style.display = "none";
 
@@ -143,6 +146,7 @@ const showPosts = (posts) => {
 };
 
 const displayLikedPosts = () => {
+
   document.getElementById("liked").innerHTML = "";
   const likedPosts = getLikedPosts();
 
