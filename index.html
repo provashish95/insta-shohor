@@ -100,7 +100,6 @@
                         push করে দেয় এবং Call Stack asynchronous function গুলা Execute করে দেয়। সুতরাং আমরা বলতে পারি
                         Event Loop এর কাজই হচ্ছে Stack memory and Event Queue কে মনিটর করা এবং Rules অনুযায়ী Queue থেকে
                         function গুলাকে Stack memory তে পৌছিয়ে দেওয়া Execution এর জন্য ।
-
                     </p>
                 </div>
 
@@ -111,16 +110,19 @@
                     <h5>Difference between local storage and session storage</h5>
                 </div>
                 <div class="card-body text-secondary">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.Some quick example text to build on the card title and make up the bulk of the
-                        card's content.Some quick example text to build on the card title and make up the bulk of the
-                        card's content.Some quick example text to build on the card title and make up the bulk of the
-                        card's content.Some quick example text to build on the card title and make up the bulk of the
-                        card's content.Some quick example text to build on the card title and make up the bulk of the
-                        card's content.Some quick example text to build on the card title and make up the bulk of the
-                        card's content.Some quick example text to build on the card title and make up the bulk of the
-                        card's content.Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
+                    <p class="card-text">Local Storage and Session Storage is a part of Web Storage API,যা আমাদেরকে
+                        ব্রাউজারে ডাটা store,update,read and delete করতে সাহায্য করে । Local and Session Storage প্রায়
+                        একই তবে কিছু কিছু পার্থক্য আছে যা নিচে তুলে ধরা হলঃ </p>
+                    <p>
+                        Local Storage এ ডাটা পার্মানেন্টলি স্টোর করা যায় । কিন্তু Session Storage এ ডাটা শুধুমাত্র ঐ
+                        একটা session এর জন্য স্টোর করা যায়, পার্মানেন্টলি ডাটা স্টোর করা যায় না । কারন Session Storage
+                        একটা ফিক্সড ট্যাব বা window এর জন্য কাজ করে । যখন ব্রাউজার/ট্যাব/window close করার সাথে সাথে
+                        Session Storage এর ডাটা auto ক্লিয়ার হয়ে যায় কিন্তু Local Storage এর ডাটা auto ক্লিয়ার হবে না ।
+                        কারন ব্রাউজার বা ট্যাব close করে আবার open করলেও Local Storage এ একই ডাটা দেখা যাবে। তবে Local
+                        Storage এর ডাটা via javascript or user manually clear করতে পারে । অন্যদিকে Local Storage এর সাইজ
+                        ৫/১০ এমবি এবং Session Storage এর সাইজ ৫ এমবি ।
+                    </p>
+
                 </div>
 
             </div>
